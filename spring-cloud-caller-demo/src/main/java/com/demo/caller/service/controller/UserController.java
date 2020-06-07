@@ -1,6 +1,6 @@
 package com.demo.caller.service.controller;
 
-import com.demo.caller.service.servicefacade.UserService;
+import com.demo.caller.service.servicefacade.IUserService;
 import com.demo.dto.ApiResponse;
 import com.demo.dto.UserDTO;
 import org.slf4j.Logger;
@@ -23,7 +23,7 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
     @RequestMapping("/user")
     public ResponseEntity<ApiResponse<UserDTO>> getUserInfo() {

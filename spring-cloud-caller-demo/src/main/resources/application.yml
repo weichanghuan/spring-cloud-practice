@@ -13,7 +13,7 @@ server:
 eureka:
   client:
     fetch-registry: true
-    register-with-eureka: true
+    register-with-eureka: false
     service-url:
       defaultZone: 'http://localhost:8000/eureka'
     registry-fetch-interval-seconds: 4
@@ -30,4 +30,7 @@ ribbon:
   eureka:
     enabled: true
 
+feign:
+  hystrix:
+    enabled: true
 
