@@ -13,5 +13,7 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
+    service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
+      defaultZone: http://localhost:8000/eureka
 
 
