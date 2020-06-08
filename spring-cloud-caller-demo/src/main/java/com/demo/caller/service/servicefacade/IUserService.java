@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name="PROVIDER-DEMO",fallback = UserFailBackService.class)
 public interface IUserService {
 
-    @RequestMapping(value = "/api/v1/user",method = RequestMethod.GET)
+    @RequestMapping(value = "/user",method = RequestMethod.GET)
     UserDTO getUserInfo();
 }

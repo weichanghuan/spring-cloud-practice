@@ -1,4 +1,6 @@
 spring:
+  sleuth:
+    enabled: true
   profiles:
     active: dev
   application:
@@ -22,6 +24,11 @@ eureka:
 
 logging:
   level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
     com:
       netflix:
         discovery: 'OFF'

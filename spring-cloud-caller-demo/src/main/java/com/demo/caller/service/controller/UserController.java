@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/6/7 2:17 AM
  */
 @RestController
-@RequestMapping("/api/v1")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);

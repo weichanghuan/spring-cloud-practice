@@ -1,0 +1,5 @@
+# 自定义服务路径
+zuul:
+  routes:
+    caller-demo: /caller/**
+  prefix: /api/v1

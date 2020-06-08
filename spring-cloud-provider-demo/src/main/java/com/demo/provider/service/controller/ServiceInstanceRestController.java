@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/6/7 4:17 AM
  */
 @RestController
-@RequestMapping("/api/v1")
 public class ServiceInstanceRestController {
+    
     @RequestMapping("/user")
     public ResponseEntity<UserDTO> getUserInfo() {
         UserDTO userDTO = new UserDTO();
