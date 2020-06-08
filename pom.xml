@@ -14,6 +14,7 @@
         <module>spring-cloud-provider-demo</module>
         <module>spring-cloud-common-dto</module>
         <module>spring-cloud-caller-demo</module>
+        <module>spring-cloud-zuul-servivce</module>
     </modules>
 
 
