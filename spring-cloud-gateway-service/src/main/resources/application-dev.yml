@@ -11,4 +11,6 @@ spring:
         - id: caller-demo
           uri: lb://CALLER-DEMO
           predicates:
-            - Path=/user
+            - Path=/api/vi/c/{segment}
+          filters:
+            - SetPath=/{segment}

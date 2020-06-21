@@ -12,7 +12,7 @@ import org.springframework.web.server.WebFilter;
 import reactor.core.publisher.Mono;
 
 
-@Configuration
+//@Configuration
 public class PrefixPathConfig {
     @Value("${spring.cloud.gateway.api-prefix:/api/v1}")
     private String prefix;
