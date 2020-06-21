@@ -1,10 +1,4 @@
 spring:
-  # 开启 Gateway 服务注册中心服务发现
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
   sleuth:
     enabled: true
     sampler:

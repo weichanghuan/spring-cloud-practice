@@ -1,0 +1,14 @@
+spring:
+  # 开启 Gateway 服务注册中心服务发现
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      enabled: true
+      routes:
+        - id: caller-demo
+          uri: lb://CALLER-DEMO
+          predicates:
+            - Path=/user
