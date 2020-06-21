@@ -1,0 +1,44 @@
+spring:
+  # 开启 Gateway 服务注册中心服务发现
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+      # 查看http://localhost:9411/zipkin/
+  zipkin:
+    base-url: http://localhost:9411/
+  profiles:
+    active: dev
+  application:
+    name: gateway-service
+
+
+server:
+  port: 8080
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
+      defaultZone: http://localhost:8000/eureka
+
+
+# ========添加配置=======
+# http://localhost:8080/actuator/routes
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #注意这里*要加引号，暴露全部，也可以只暴露相应endpoint
+  endpoint:
+    routes:
+      enabled: true # 默认为true，可以省略
+
+
